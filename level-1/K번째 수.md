@@ -44,6 +44,15 @@ vector<int> solution(vector<int> array, vector<vector<int>> commands) {
     }
     return answer;
 }
-```
 
-iter의 값을 뽑아내기 위해서는 (\*iter)[0] 이런식으로
+---
+
+def solution(array, commands):
+    answer = []
+
+    for i,j,k in commands:
+        temp_arr = array[i-1:j]
+        temp_arr.sort()
+        answer.append(temp_arr[k-1])
+    return answer
+```
