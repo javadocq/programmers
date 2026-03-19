@@ -26,7 +26,7 @@
 
 ### 문제 풀이
 
-```
+```cpp
 #include <string>
 #include <iostream>
 using namespace std;
@@ -46,5 +46,26 @@ bool solution(string s)
     if(p == y) {
         return true;
     } return false;
+}
+```
+
+```cpp
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+bool solution(string s)
+{
+    bool answer = true;
+    string new_s = "";
+
+    for(char c : s) {
+        new_s += tolower(c);
+    }
+    int p = count(new_s.begin(), new_s.end(), 'p');
+    int y = count(new_s.begin(), new_s.end(), 'y');
+
+    return p == y;
 }
 ```
